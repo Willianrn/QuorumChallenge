@@ -1,0 +1,6 @@
+@QuorumChallengeApi_HostAddress = http://localhost:5171
+
+GET {{QuorumChallengeApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
