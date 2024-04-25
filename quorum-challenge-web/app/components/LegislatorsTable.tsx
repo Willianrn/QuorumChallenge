@@ -17,19 +17,19 @@ export default function LegislatorsTable() {
     <table>
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Legislator</th>
-          <th>Supported bills</th>
-          <th>Opposed bills</th>
+          <th className="px-4 py-1">ID</th>
+          <th className="px-4 py-1">Legislator</th>
+          <th className="px-4 py-1">Supported bills</th>
+          <th className="px-4 py-1">Opposed bills</th>
         </tr>
       </thead>
       <tbody>
         {data.map((legislator: any) => (
           <tr>
-            <td>{legislator.id}</td>
-            <td>{legislator.name}</td>
-            <td>{legislator.supportedBills}</td>
-            <td>{legislator.opposedBills}</td>
+            <td className="px-4 py-1">{legislator.id}</td>
+            <td className="px-4 py-1">{legislator.name}</td>
+            <td className="px-4 py-1">{legislator.supportedBills}</td>
+            <td className="px-4 py-1">{legislator.opposedBills}</td>
           </tr>
         ))}
       </tbody>

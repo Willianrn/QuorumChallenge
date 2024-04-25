@@ -28,8 +28,8 @@ namespace QuorumChallengeApi.Services
                                                   Id = b.Id,
                                                   Title = b.Title,
                                                   PrimarySponsor = b.PrimarySponsor,
-                                                  Supporters = votes.Count(v => v.BillId == b.Id && v.Results.Any(r => r.VoteType == 1)),
-                                                  Opposers = votes.Count(v => v.BillId == b.Id && v.Results.Any(r => r.VoteType == 2)),
+                                                  Supporters = votes.Where(w => w.BillId == b.Id).SelectMany(s => s.Results).Where(w => w.VoteType == 1).Count(),
+                                                  Opposers = votes.Where(w => w.BillId == b.Id).SelectMany(s => s.Results).Where(w => w.VoteType == 2).Count(),
                                                   PrimarySponsorLegislator = legislators.FirstOrDefault(l => l.Id == b.PrimarySponsor)?.Name ?? "Unknown"
                                              }).ToList();
 

@@ -17,21 +17,21 @@ export default function BillsTable() {
     <table>
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Bill</th>
-          <th>Supporters</th>
-          <th>Opposers</th>
-          <th>Primary Sponsor</th>
+          <th className="px-4 py-1">ID</th>
+          <th className="px-4 py-1">Bill</th>
+          <th className="px-4 py-1">Supporters</th>
+          <th className="px-4 py-1">Opposers</th>
+          <th className="px-4 py-1">Primary Sponsor</th>
         </tr>
       </thead>
       <tbody>
         {data.map((bill: any) => (
           <tr>
-            <td>{bill.id}</td>
-            <td>{bill.title}</td>
-            <td>{bill.supporters}</td>
-            <td>{bill.opposers}</td>
-            <td>{bill.primarySponsorLegislator}</td>
+            <td className="px-4 py-1">{bill.id}</td>
+            <td className="px-4 py-1">{bill.title}</td>
+            <td className="px-4 py-1">{bill.supporters}</td>
+            <td className="px-4 py-1">{bill.opposers}</td>
+            <td className="px-4 py-1">{bill.primarySponsorLegislator}</td>
           </tr>
         ))}
       </tbody>
